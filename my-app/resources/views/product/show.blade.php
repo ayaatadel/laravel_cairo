@@ -15,25 +15,16 @@
                 <th>Product availablity</th>
                 <th>Actions</th>
 
-{{-- ['products'=>$products] --}}
 
-{{-- $products=[
-    'product_name'=>"nab",
-    "product_price"=>12,
-    "product_availability"=>"avil"
-] --}}
             </tr>
         </thead>
-
         <tbody>
-            @foreach ($products as $product )
             <tr>
                 <td>{{$product->product_name}}</td>
                 <td>{{$product->product_price}}</td>
                 <td>{{$product->product_availability}}</td>
-                <td><button>show</button></td>
+                <td><a href="{{route('product.index')}}">back</a></td>
             </tr>
-            @endforeach
 
         </tbody>
     </table>
