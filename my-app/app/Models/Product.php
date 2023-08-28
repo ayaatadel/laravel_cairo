@@ -9,9 +9,16 @@ class Product extends Model
 {
     use HasFactory;
     // protected $table="myProducts";
-    protected $primaryKey="product_id";
+    // protected $primaryKey="product_id";
     // protected $fillable='product_name';
     protected $guarded=[];
     public $timestamps=false;
+
+ // category data         ==> category id      hasone  == data category > product
+    function category()
+    {
+        // hasOne   product_id => category
+        return $this->belongsTo(Category::class);
+    }
 
 }
